@@ -1,5 +1,6 @@
 .gradle
 /build/
+/mysql-5.7.21-winx64/
 !gradle/wrapper/gradle-wrapper.jar
 
 ### STS ###
@@ -12,6 +13,7 @@
 
 ### IntelliJ IDEA ###
 .idea
+/mysql-5.7.21-winx64/
 *.iws
 *.iml
 *.ipr

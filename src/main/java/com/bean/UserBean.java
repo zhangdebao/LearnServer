@@ -1,6 +1,6 @@
 package com.bean;
 
-public class UserBean {
+public class UserBean{
     private String username;
     private String password;
     private long id;
