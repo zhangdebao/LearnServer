@@ -26,6 +26,9 @@ repositories {
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-data-redis')
 	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.springframework.data:spring-data-redis')
+//	compile('com.alibaba', name: 'fastjson', version: '1.1.15')
+	compile group: 'com.alibaba', name: 'fastjson', version: '1.1.15'
 	runtime('mysql:mysql-connector-java')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
