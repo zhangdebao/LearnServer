@@ -30,7 +30,7 @@ public class RedisClients {
         try {
             Resource resource = new ClassPathResource("application.properties");
             Properties props = PropertiesLoaderUtils.loadProperties(resource);
-            DefaultTime = Integer.valueOf(props.getProperty("redis.cache.timeout"));
+            DefaultTime = Integer.valueOf(props.getProperty("spring.redis.timeout"));
         } catch (IOException e) {
             e.printStackTrace();
         }
