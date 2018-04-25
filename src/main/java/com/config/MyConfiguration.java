@@ -13,6 +13,8 @@ public class MyConfiguration extends WebMvcConfigurerAdapter {
         // addPathPatterns 用于添加拦截规则
         // excludePathPatterns 用户排除拦截
         registry.addInterceptor(new MyIntercepter()).addPathPatterns("/*");
+        registry.addInterceptor(new MyIntercepter()).addPathPatterns("/*/*");
+        registry.addInterceptor(new MyIntercepter()).addPathPatterns("/*/*/*");
         super.addInterceptors(registry);
     }
 }

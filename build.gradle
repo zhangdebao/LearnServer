@@ -27,8 +27,12 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-data-redis')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('org.springframework.data:spring-data-redis')
-//	compile('com.alibaba', name: 'fastjson', version: '1.1.15')
 	compile group: 'com.alibaba', name: 'fastjson', version: '1.1.15'
 	runtime('mysql:mysql-connector-java')
+
+	compile("org.springframework.boot:spring-boot-starter-websocket")
+	compile("org.webjars:webjars-locator-core")
+	compile("org.webjars:sockjs-client:1.0.2")
+	compile("org.webjars:stomp-websocket:2.3.3")
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }

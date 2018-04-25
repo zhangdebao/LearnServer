@@ -15,7 +15,7 @@ public class LoginController {
     private static final String template = "Hello, %s!";
     private final AtomicLong counter = new AtomicLong();
 
-    @RequestMapping(value = "/checkLogin", method = RequestMethod.POST)
+    @RequestMapping(value = "/checkLogin", method = RequestMethod.DELETE)
     public ResultMsg login(@RequestParam(value="username", defaultValue="admin") String username, @RequestParam(value = "password", defaultValue = "admin") String password) {
         UserBean userBean = new UserBean(String.format(template, username), String.format(template, password), counter.incrementAndGet());
         ResultMsg responseMsg = ResultUtils.success(userBean, "success");
