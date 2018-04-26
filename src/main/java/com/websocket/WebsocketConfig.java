@@ -29,7 +29,7 @@ public class WebsocketConfig  implements WebSocketMessageBrokerConfigurer{
          * SockJS客户端将尝试连接到“/serverStatus”并使用可用的最佳传输（websocket，xhr-streaming，xhr-polling等）。
          * setAllowedOrigins: 允许跨域
          */
-        registry.addEndpoint("/serverStatus").setAllowedOrigins("*").withSockJS();
+        registry.addEndpoint("/serverinfo").setAllowedOrigins("*").withSockJS();
     }
 
     /**
@@ -38,7 +38,7 @@ public class WebsocketConfig  implements WebSocketMessageBrokerConfigurer{
      */
     @Override
     public void configureMessageBroker(MessageBrokerRegistry registry) {
-        registry.enableSimpleBroker("/receive"); // 调用enableSimpleBroker()一个简单的基于内存的消息代理，将问候消息带回以“/ receive”为前缀的客户端
+        registry.enableSimpleBroker("/ws-be"); // 调用enableSimpleBroker()一个简单的基于内存的消息代理，将问候消息带回以“/ receive”为前缀的客户端
 //        registry.setApplicationDestinationPrefixes("/app"); //为绑定了@MessageMapping注解方法的消息指定“/ app”前缀,该前缀将用于定义所有消息映射
     }
 
