@@ -36,9 +36,9 @@ public class ServerStatusController  {
                                 (int) (Math.random() * 90 + 2000),
                                 (int) (Math.random() * 100 + 50),
                                 (int) (Math.random() * 10 + 3000),
-                                "window");
+                                "Windows 10");
     }
-    @Scheduled(fixedRate = 1000) //每个5秒提取一次
+    @Scheduled(fixedRate = 10000) //每个5秒提取一次
     @SendTo("/ws-be/serverinfo") //广播所有用户
     public Object sendAllMessage () {
         // 发现消息
@@ -52,7 +52,7 @@ public class ServerStatusController  {
                 (int) (Math.random() * 90 + 2000),
                 (int) (Math.random() * 100 + 50),
                 (int) (Math.random() * 10 + 3000),
-                "window"));
+                "window10"));
         return "callback";
     }
 }
