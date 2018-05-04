@@ -1,29 +1,29 @@
 package com.bean;
 
 public class ServerStatus {
+    private int cpuRatio;
+    private int totalMemory;
+    private int freePhysicalMemorySize;
     private long time;
     private int totalThread;
-    private int cpuRatio;
     private int maxMemory;
-    private int totalMemory;
     private int freeMemory;
     private int totalMemorySize;
-    private int freePhysicalMemorySize;
     private int usedMemory;
     private String osName;
 
 
     public ServerStatus(ServerStatus serverStatus) {}
 
-    public ServerStatus(long time, int totalThread, int cpuRatio, int maxMemory, int totalMemory, int freeMemory, int totalMemorySize, int freePhysicalMemorySize, int usedMemory, String osName) {
+    public ServerStatus(int cpuRatio, int totalMemory, int freePhysicalMemorySize, long time, int totalThread, int maxMemory, int freeMemory, int totalMemorySize, int usedMemory, String osName) {
+        this.cpuRatio = cpuRatio;
+        this.totalMemory = totalMemory;
+        this.freePhysicalMemorySize = freePhysicalMemorySize;
         this.time = time;
         this.totalThread = totalThread;
-        this.cpuRatio = cpuRatio;
         this.maxMemory = maxMemory;
-        this.totalMemory = totalMemory;
         this.freeMemory = freeMemory;
         this.totalMemorySize = totalMemorySize;
-        this.freePhysicalMemorySize = freePhysicalMemorySize;
         this.usedMemory = usedMemory;
         this.osName = osName;
     }
